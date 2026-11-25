@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScamLens — V2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ScamLens home"><img src="assets/scamlens-mark.svg" alt="" class="brand-mark"><span>ScamLens</span></a>
+    <nav class="nav" aria-label="Primary navigation"><a href="#how-it-works">How it works</a><a href="#understand-risks">Understand the risks</a></nav>
+    <a class="button button-secondary" href="#checker">Try the demo</a>
+  </header>
+
+  <main id="top">
+    <section class="hero-section" id="checker">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-intro">
+            <p class="eyebrow">A closer look at every link</p>
+            <h1>Check the link.<br>Before you click.</h1>
+            <p class="lead">Pause before opening an unfamiliar URL. Explore warning signs and understand what deserves a second look.</p>
+          </div>
+
+          <form class="checker-form" id="checker-form" novalidate>
+            <label for="url-input">Link to check</label>
+            <div class="form-row">
+              <input id="url-input" name="url" type="url" value="https://example.com" placeholder="https://example.com" autocomplete="url" aria-describedby="form-note">
+              <button class="button button-primary" type="submit">Check link</button>
+            </div>
+            <p class="form-note" id="form-note">Try the sample to explore a result.</p>
+          </form>
+
+          <p class="education-note"><strong>EDUCATIONAL BY DESIGN</strong><span>No link is opened by this demo.</span></p>
+        </div>
+
+        <article class="analysis-card" aria-live="polite">
+          <div class="analysis-header"><h2>Link analysis</h2><span class="demo-badge">Demo</span></div>
+          <div class="submitted-url"><span class="label">LINK UNDER REVIEW</span><code id="submitted-url">https://account-review.example/verify</code></div>
+          <div class="status-panel"><span class="risk-badge suspicious" id="risk-badge">Suspicious</span><p id="status-title">This link deserves a second look.</p></div>
+          <div class="warning-list">
+            <div class="warning"><span>01</span><div><strong>Account-themed domain</strong><p>Familiar account language can make a link feel official.</p></div></div>
+            <div class="warning"><span>02</span><div><strong>Verification-style path</strong><p>“/verify” is a cue to check the source before you continue.</p></div></div>
+            <div class="warning"><span>03</span><div><strong>Unconfirmed identity</strong><p>The URL alone does not tell you who is behind the site.</p></div></div>
+          </div>
+          <div class="demo-disclosure"><strong>Demo result — not a live security scan</strong><p>Illustrative signals, not proof that a link is unsafe.</p></div>
+        </article>
+      </div>
+
+      <div class="principles"><span><b>01</b>Learn the signals</span><span><b>02</b>Understand the context</span><span><b>03</b>Make a more informed next move</span></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE PROCESS</p><h2>How it works</h2></div><p class="section-support">A short pause can change your next move.<br>Here’s where to start.</p></div>
+      <div class="steps">
+        <article class="step"><span>01</span><h3>Paste the link</h3><p>Copy a URL from a message, email, or post. Paste it into ScamLens before visiting the destination.</p></article>
+        <article class="step"><span>02</span><h3>Explore the signals</h3><p>Read the potential warning signs. Look at the domain, the path, and the context around the link.</p></article>
+        <article class="step"><span>03</span><h3>Decide with context</h3><p>If something feels off, pause. Open the official app or contact the sender through a trusted channel.</p></article>
+      </div>
+    </section>
+
+    <section class="risks-section" id="understand-risks">
+      <div class="risk-grid">
+        <div class="risk-intro"><p class="eyebrow">02 / KNOW WHAT TO LOOK FOR</p><h2>Understand<br>the risks</h2><p class="risk-lead">Read the address.<br>Question the context.</p><p>A convincing message can lead to an unfamiliar place. Learn which parts of a URL deserve your attention.</p><div class="https-note"><strong>HTTPS is not a trust guarantee.</strong><p>An encrypted connection can still lead to a deceptive website.</p></div></div>
+        <article class="anatomy-card">
+          <div class="anatomy-header"><h3>Anatomy of a second look</h3><span>ILLUSTRATIVE URL</span></div>
+          <div class="address"><code>https://</code><code class="address-domain">account-review.example</code><code>/verify</code></div>
+          <div class="anatomy-row"><span>DOMAIN</span><div><strong>Who is this really?</strong><p>Generic words like “account” or “review” are not proof of a connection to a familiar company.</p></div></div>
+          <div class="anatomy-row"><span>PATH</span><div><strong>What are you being asked to do?</strong><p>A verification-style path is a reason to check the original message and confirm the sender.</p></div></div>
+          <div class="anatomy-row"><span>CONTEXT</span><div><strong>Does the request make sense?</strong><p>Unexpected urgency or requests for personal details deserve an independent check.</p></div></div>
+        </article>
+      </div>
+      <div class="risk-levels"><p class="risk-levels-title">Signals to guide you. Never a guarantee.</p><div class="risk-level-grid"><article><span class="risk-badge low">Low risk</span><p>No obvious URL warning signs. Still check who you’re dealing with.</p></article><article><span class="risk-badge suspicious">Suspicious</span><p>Something deserves a second look. Verify the source before continuing.</p></article><article><span class="risk-badge high">High risk</span><p>Strong warning signs. Avoid continuing without independent verification.</p></article></div></div>
+    </section>
+
+    <section class="promise-section"><div class="promise-card"><div class="promise-heading"><p class="eyebrow">AWARENESS, NOT ALARM</p><h2>A second look.<br>Not a security guarantee.</h2></div><div class="promise-copy"><p>ScamLens is an educational URL checker. This demo illustrates potential warning signs — it does not perform a live security scan or confirm that a link is safe or malicious.</p><strong>When in doubt, go direct. Use an official app or a trusted address.</strong></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#top"><img src="assets/scamlens-mark.svg" alt="" class="brand-mark small"><span>ScamLens</span></a><nav class="footer-nav" aria-label="Footer navigation"><a href="#how-it-works">How it works</a><a href="#understand-risks">Understand the risks</a><a class="footer-demo" href="#checker">Try the demo</a></nav></div><div class="footer-bottom"><span>© 2026 ScamLens</span><span>Built for awareness. For educational use only.</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
